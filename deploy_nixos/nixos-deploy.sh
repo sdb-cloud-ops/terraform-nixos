@@ -29,10 +29,10 @@ outPath="$2"
 targetHost="$3"
 targetPort="$4"
 buildOnTarget="$5"
-sshPrivateKey="$6"
-action="$7"
-deleteOlderThan="$8"
-shift 8
+sshPrivateKey="${sshPrivateKey:-}"
+action="$6"
+deleteOlderThan="$7"
+shift 7
 
 # remove the last argument
 set -- "${@:1:$(($# - 1))}"
